@@ -1,0 +1,16 @@
+{
+  "id": "doublebox",
+  "type": "SharedSlice",
+  "name": "Doublebox",
+  "description": "Doublebox",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}
