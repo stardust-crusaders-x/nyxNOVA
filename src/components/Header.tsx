@@ -1,6 +1,6 @@
 import { createClient } from '@/prismicio';
-
-
+import { PrismicNextLink } from '@prismicio/next';
+import Link from 'next/link';
 
 export default async function Header(){
 
@@ -8,6 +8,22 @@ export default async function Header(){
 
     const settings = await client.getSingle("settings");
     return(
-        <header>{settings.data.site_title}</header>
+        <header>
+            <link href='/'></link>
+            {settings.data.site_title}
+        
+        <nav>
+            <ul>
+                {settings.data.navigation.map(({link, label})=>(
+                     <li key={label}>
+                     <PrismicNextLink field={link} className="p-3">
+                       {label}
+                     </PrismicNextLink>
+                   </li>
+
+                ))}
+            </ul>
+        </nav>
+        </header>
     )
 }
