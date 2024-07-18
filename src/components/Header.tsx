@@ -9,7 +9,7 @@ export default async function Header(){
     const settings = await client.getSingle("settings");
     return(
         <header>
-            <link href='/'></link>
+            <Link href='/'></Link>
             {settings.data.site_title}
         
         <nav>

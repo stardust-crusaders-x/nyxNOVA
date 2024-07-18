@@ -51,6 +51,30 @@
             }
           }
         }
+      },
+      "contact": {
+        "type": "Group",
+        "config": {
+          "label": "contact",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "contact": {
+              "type": "Text",
+              "config": {
+                "label": "contact",
+                "placeholder": ""
+              }
+            }
+          }
+        }
       }
     }
   }

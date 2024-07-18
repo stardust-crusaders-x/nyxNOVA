@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import type { Metadata, ResolvingMetadata } from "next";
 import clsx from 'clsx';
 import { createClient } from '@/prismicio';
+import Footer from '@/components/Footer';
 
 
 const nova_mono = Nova_Mono({
@@ -45,7 +46,7 @@ export default function RootLayout({
         <Header />
         {children}
         <div className="flex">/</div>
-        <footer>Footer!</footer>
+        <Footer />
       </body>
     </html>
   )
