@@ -11,7 +11,7 @@ export default async function Header(){
 
     const settings = await client.getSingle("settings");
     return(
-        <Bounded as ="header" className='"py-4 md:py-6 lg:py-8'>
+        <Bounded as ="header" className='py-4 md:py-6 lg:py-8'>
             <div className="flex gap-4 items-center justify-between px-4 md:flex">
             <Link href="/">
         <Image src="/images/logo (1).png" alt="AetherWatch" width={200} height={100} />
