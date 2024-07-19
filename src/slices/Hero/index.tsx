@@ -14,16 +14,29 @@ const components: JSXMapSerializer = {
     <Heading
       as="h2"
       size="xl"
-      className="mb-6 md:mb-10 text-4xl md:text-5xl font-bold text-gray-400"
+      className="mt-6 md:mt-10 text-4xl md:text-5xl font-bold text-gray-600 uppercase tracking-[1.3em]"
     >
       {children}
     </Heading>
   ),
   paragraph: ({ children }) => (
-    <p className="text-2xl font-normal leading-10 font-body text-gray-200 mb-6 md:mb-8 max-w-md">
-      
+    <p 
+      className="mt-6 md:mt-10 text-2xl md:text-2xl font-body text-yellow-200 gap-8 max-w-md space-y-4"
+    >
       {children}
     </p>
+  ),
+  // Add bold and list support
+  strong: ({ children }) => (
+    <strong className="font-bold">{children}</strong>
+  ),
+  list: ({ children }) => (
+    <ul className="list-disc list-inside mt-6 md:mt-10 text-2xl text-yellow-300 space-y-4">
+      {children}
+    </ul>
+  ),
+  listItem: ({ children }) => (
+    <li className="mt-2 font-bold space-y-4">{children}</li>
   ),
 };
 
@@ -37,22 +50,22 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           data-slice-type={slice.slice_type}
           data-slice-variation={slice.variation}
         >
-          <div className="grid grid-cols-1 place-items-center text-center gap-8 md:gap-10">
+          <div className="grid min-h-screen grid-cols-1 place-items-center text-center gap-8 md:gap-10">
             <PrismicNextImage
               field={slice.primary.image}
-              className="drop-shadow-xl max-w-6xl w-full h-64 object-cover mb-6 md:mb-8" // Added margin-bottom for more space between image and heading
+              className="drop-shadow-xl max-w-6xl w-full h-64 object-cover mb-6 md:mb-8"
             />
             <PrismicRichText
               field={slice.primary.heading}
               components={components}
             />
-            <div className="mb-6 md:mb-8"> {/* Added margin-bottom for more space between heading and body */}
+            <div className="mb-6 md:mb-16 text-4xl">
               <PrismicRichText
                 field={slice.primary.body}
                 components={components}
               />
             </div>
-            <div className="flex justify-center mt-4 md:mt-6"> {/* Flexbox used to center the button */}
+            <div className="w-full flex justify-center mt-16"> {/* Adjust margin top to create space */}
               <Button field={slice.primary.button_link}>
                 {slice.primary.button_text}
               </Button>

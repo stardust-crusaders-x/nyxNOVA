@@ -1,6 +1,7 @@
 import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
+import Bounded from "./Bounded";
 
 
 
@@ -12,8 +13,9 @@ export default async function Footer(){
     const settings = await client.getSingle("settings");
 
     return (<footer>
+        <Bounded>
         <Link href="/">
-        
+          
         </Link>
         <p className="text-xs">
           ©{new Date().getFullYear()} {settings.data.site_title}
@@ -25,6 +27,7 @@ export default async function Footer(){
                     </li>
             ))}
         </ul>
+        </Bounded>
     </footer>)
 
 }
