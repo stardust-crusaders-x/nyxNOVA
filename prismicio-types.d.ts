@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomeDocumentDataSlicesSlice = DoubleboxSlice | HeroSlice;
+type HomeDocumentDataSlicesSlice = HeroSlice;
 
 /**
  * Content for home documents
@@ -75,6 +75,67 @@ interface HomeDocumentData {
  */
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
+
+type PageDocumentDataSlicesSlice = FeaturesSlice;
+
+/**
+ * Content for Page documents
+ */
+interface PageDocumentData {
+  /**
+   * Slice Zone field in *Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 /**
  * Item in *settings → navigation *
@@ -202,36 +263,96 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomeDocument | SettingsDocument;
+export type AllDocumentTypes = HomeDocument | PageDocument | SettingsDocument;
 
 /**
- * Default variation for Doublebox Slice
+ * Item in *Features → Default → Primary → icons*
+ */
+export interface FeaturesSliceDefaultPrimaryIconsItem {
+  /**
+   * icons field in *Features → Default → Primary → icons*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.default.primary.icons[].icons
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icons: prismic.ImageField<never>;
+
+  /**
+   * title field in *Features → Default → Primary → icons*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.default.primary.icons[].title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * description field in *Features → Default → Primary → icons*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.default.primary.icons[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Features → Default → Primary*
+ */
+export interface FeaturesSliceDefaultPrimary {
+  /**
+   * heading field in *Features → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * icons field in *Features → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.default.primary.icons[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  icons: prismic.GroupField<Simplify<FeaturesSliceDefaultPrimaryIconsItem>>;
+}
+
+/**
+ * Default variation for Features Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type DoubleboxSliceDefault = prismic.SharedSliceVariation<
+export type FeaturesSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<FeaturesSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *Doublebox*
+ * Slice variation for *Features*
  */
-type DoubleboxSliceVariation = DoubleboxSliceDefault;
+type FeaturesSliceVariation = FeaturesSliceDefault;
 
 /**
- * Doublebox Shared Slice
+ * Features Shared Slice
  *
- * - **API ID**: `doublebox`
- * - **Description**: Doublebox
+ * - **API ID**: `features`
+ * - **Description**: Features
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type DoubleboxSlice = prismic.SharedSlice<
-  "doublebox",
-  DoubleboxSliceVariation
+export type FeaturesSlice = prismic.SharedSlice<
+  "features",
+  FeaturesSliceVariation
 >;
 
 /**
@@ -329,14 +450,19 @@ declare module "@prismicio/client" {
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
+      PageDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       SettingsDocumentDataContactItem,
       AllDocumentTypes,
-      DoubleboxSlice,
-      DoubleboxSliceVariation,
-      DoubleboxSliceDefault,
+      FeaturesSlice,
+      FeaturesSliceDefaultPrimaryIconsItem,
+      FeaturesSliceDefaultPrimary,
+      FeaturesSliceVariation,
+      FeaturesSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
