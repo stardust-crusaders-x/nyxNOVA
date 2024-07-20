@@ -50,7 +50,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           data-slice-type={slice.slice_type}
           data-slice-variation={slice.variation}
         >
-          <div className="grid min-h-screen grid-cols-1 place-items-center text-center gap-8 md:gap-10">
+          <div className="grid min-h-screen grid-cols-1 place-items-center text-center ">
             <PrismicNextImage
               field={slice.primary.image}
               className="drop-shadow-xl max-w-6xl w-full h-64 object-cover mb-6 md:mb-8"
