@@ -14,7 +14,7 @@ export default async function Header(){
         <Bounded as ="header" className='py-4 md:py-6 lg:py-8'>
             <div className="flex gap-4 items-center justify-between px-4 md:flex">
             <Link href="/">
-        <Image src="/images/logo (2).png" alt="GuardIQ" width={200} height={100} />
+        <Image src="git/images/logo (2).png" alt="GuardIQ" width={200} height={100} />
          
             </Link>
         
