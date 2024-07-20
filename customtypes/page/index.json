@@ -18,6 +18,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "chatbot": {
+              "type": "SharedSlice"
+            },
+            "sign_up": {
+              "type": "SharedSlice"
+            },
             "features": {
               "type": "SharedSlice"
             }

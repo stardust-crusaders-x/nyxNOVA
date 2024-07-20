@@ -76,7 +76,7 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-type PageDocumentDataSlicesSlice = FeaturesSlice;
+type PageDocumentDataSlicesSlice = ChatbotSlice | SignUpSlice | FeaturesSlice;
 
 /**
  * Content for Page documents
@@ -266,6 +266,61 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes = HomeDocument | PageDocument | SettingsDocument;
 
 /**
+ * Primary content in *Chatbot → Default → Primary*
+ */
+export interface ChatbotSliceDefaultPrimary {
+  /**
+   * query field in *Chatbot → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: chatbot.default.primary.query
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  query: prismic.RichTextField;
+
+  /**
+   * answer field in *Chatbot → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: chatbot.default.primary.answer
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  answer: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Chatbot Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ChatbotSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ChatbotSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Chatbot*
+ */
+type ChatbotSliceVariation = ChatbotSliceDefault;
+
+/**
+ * Chatbot Shared Slice
+ *
+ * - **API ID**: `chatbot`
+ * - **Description**: Chatbot
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ChatbotSlice = prismic.SharedSlice<
+  "chatbot",
+  ChatbotSliceVariation
+>;
+
+/**
  * Item in *Features → Default → Primary → icons*
  */
 export interface FeaturesSliceDefaultPrimaryIconsItem {
@@ -437,6 +492,88 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *SignUp → Default → Primary*
+ */
+export interface SignUpSliceDefaultPrimary {
+  /**
+   * heading field in *SignUp → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * image field in *SignUp → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * mail field in *SignUp → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.default.primary.mail
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mail: prismic.KeyTextField;
+
+  /**
+   * name field in *SignUp → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.default.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * done field in *SignUp → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sign_up.default.primary.done
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  done: prismic.LinkField;
+}
+
+/**
+ * Default variation for SignUp Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SignUpSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SignUpSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SignUp*
+ */
+type SignUpSliceVariation = SignUpSliceDefault;
+
+/**
+ * SignUp Shared Slice
+ *
+ * - **API ID**: `sign_up`
+ * - **Description**: SignUp
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SignUpSlice = prismic.SharedSlice<"sign_up", SignUpSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -458,6 +595,10 @@ declare module "@prismicio/client" {
       SettingsDocumentDataNavigationItem,
       SettingsDocumentDataContactItem,
       AllDocumentTypes,
+      ChatbotSlice,
+      ChatbotSliceDefaultPrimary,
+      ChatbotSliceVariation,
+      ChatbotSliceDefault,
       FeaturesSlice,
       FeaturesSliceDefaultPrimaryIconsItem,
       FeaturesSliceDefaultPrimary,
@@ -467,6 +608,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      SignUpSlice,
+      SignUpSliceDefaultPrimary,
+      SignUpSliceVariation,
+      SignUpSliceDefault,
     };
   }
 }
