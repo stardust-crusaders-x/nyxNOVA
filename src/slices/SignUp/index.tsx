@@ -1,6 +1,6 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-
+import Login from "@/components/Login";
 /**
  * Props for `SignUp`.
  */
@@ -15,7 +15,7 @@ const SignUp = ({ slice }: SignUpProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for sign_up (variation: {slice.variation}) Slices
+      <Login />
     </section>
   );
 };

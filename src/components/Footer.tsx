@@ -17,7 +17,7 @@ export default async function Footer(){
             <div className="flex gap-4 items-center justify-between px-4 md:flex">
         <Link href="/">
         
-        <Image src="/images/logo (1).png" alt="AetherWatch" width={200} height={100} />
+        <Image src="/images/logo (2).png" alt="GuardIQ" width={200} height={100} />
         </Link>
 
         <p className="text-xs py-4 md:py-6 lg:py-8 flex">

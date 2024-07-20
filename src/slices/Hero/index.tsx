@@ -31,7 +31,7 @@ const components: JSXMapSerializer = {
     <strong className="font-bold">{children}</strong>
   ),
   list: ({ children }) => (
-    <ul className="list-disc list-inside mt-6 md:mt-10 text-2xl text-yellow-300 space-y-4">
+    <ul className="list-disc list-inside mt-3 md:mt-10 text-2xl text-yellow-300 space-y-4">
       {children}
     </ul>
   ),
@@ -65,7 +65,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
                 components={components}
               />
             </div>
-            <div className="w-full flex justify-center mt-16"> {/* Adjust margin top to create space */}
+            <div className="w-full flex justify-center mt-10"> {/* Adjust margin top to create space */}
               <Button field={slice.primary.button_link}>
                 {slice.primary.button_text}
               </Button>
