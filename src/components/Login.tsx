@@ -101,7 +101,7 @@ const Login: React.FC<LoginProps> = () => {
           </span>
         ) : (
           <span className="user-stat">
-            Don't have an account?{" "}
+            Donot have an any account?{" "}
             <b
               onClick={() => {
                 setNewUser(true);
