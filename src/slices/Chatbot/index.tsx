@@ -1,5 +1,6 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import Bounded from "@/components/Bounded";
 
 /**
  * Props for `Chatbot`.
@@ -11,7 +12,7 @@ export type ChatbotProps = SliceComponentProps<Content.ChatbotSlice>;
  */
 const Chatbot = ({ slice }: ChatbotProps): JSX.Element => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -21,7 +22,7 @@ const Chatbot = ({ slice }: ChatbotProps): JSX.Element => {
         style={{ height: "100%", minHeight: 700 }}
         frameBorder="0"
       />
-    </section>
+    </Bounded>
   );
 };
 
