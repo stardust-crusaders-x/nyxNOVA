@@ -15,7 +15,12 @@ const Chatbot = ({ slice }: ChatbotProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for chatbot (variation: {slice.variation}) Slices
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/dNIZ_vm2s3hnjJ518qOD2"
+        width="100%"
+        style={{ height: "100%", minHeight: 700 }}
+        frameBorder="0"
+      />
     </section>
   );
 };
