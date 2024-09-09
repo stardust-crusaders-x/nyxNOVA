@@ -53,9 +53,9 @@ export default function RootLayout({
         </div>
 
         {/* Content */}
-        <div className="content font-protest-guerrilla text-slate-200 ">
+        <div className="content font-protestGuerrilla text-slate-200 ">
           <Header />
-          <div className="font-handjet text-yellow-200 hover:text-slate-300">
+          <div className="content font-handjet text-yellow-200 hover:text-slate-300">
             {children}
           </div>
           <Footer />

@@ -9,8 +9,8 @@ export default async function Header(){
 
     const settings = await client.getSingle("settings");
     return(
-        <section as ="header" className='transparent font-bold py-4 md:py-6 lg:py-8'>
-            <div className="flex gap-4 items-center justify-between px-4 py-6 md:flex">
+        <section as ="header" className='transparent font-bold py-4 md:py-2 lg:py-2'>
+            <div className="flex gap-4 items-center justify-between px-4 py-2 md:flex">
                 <Link href="/">
                     <Image src="/images/Designer (1).png" alt="nyxNOVA" width={100} height={10} />
                 </Link>
