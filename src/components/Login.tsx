@@ -1,8 +1,8 @@
 'use client';
 
 import "./Login.css";
-import logoimg from "./logo (3).png";
-import warning from "./logo (3).png";
+import logoimg from "./Designer (1).png";
+import warning from "./Designer (1).png";
 import { useState } from "react";
 import { StaticImageData } from "next/image";
 
@@ -37,7 +37,7 @@ const Login: React.FC<LoginProps> = () => {
     <div className="login-page">
       <header>
         <span>
-          from <i>GuardIQ</i>
+          from <i>nyxNOVA</i>
         </span>
       </header>
 

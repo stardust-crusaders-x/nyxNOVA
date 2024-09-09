@@ -2,4 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Fonts */
+  :root {
+    --font-handjet: 'Handjet', sans-serif;
+    --font-protest-guerrilla: 'Protest_Guerrilla', serif;
+  }
+  
+  .font-handjet {
+    font-family: var(--font-handjet);
+  }
+  
+  .font-protest-guerrilla {
+    font-family: var(--font-protest-guerrilla);
+  }

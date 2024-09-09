@@ -1,34 +1,35 @@
-import { Inter, Roboto_Mono } from 'next/font/google'
+import { Protest_Guerrilla } from 'next/font/google'
 import "./globals.css";
-import { Nova_Mono } from 'next/font/google';
+import { Handjet } from 'next/font/google';
 import Header from "@/components/Header";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import clsx from 'clsx';
 import { createClient } from '@/prismicio';
 import Footer from '@/components/Footer';
+import React, { useRef, useEffect } from 'react';
 
-
-const nova_mono = Nova_Mono({
+const handjet = Handjet({
   weight: '400',
-  subsets: ['latin'],
-  variable: '--font-nova-mono', 
+  subsets: ['vietnamese'],
+  variable: '--font-handjet', 
   display: 'swap',
 });
  
-const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
+const protestGuerrilla = Protest_Guerrilla({
+  weight: '400',
+  subsets: ['latin-ext'],
   display: 'swap',
-  variable: '--font-roboto-mono',
-})
+  variable: '--font-protestGuerrilla',
+});
+
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
 
   const settings = await client.getSingle("settings");
 
   return {
-    title: settings.data.site_title || "AETHERWATCH",
-    description:
-      settings.data.meta_description || "Aetherwatch is an advanced finance fraud detection and prevention management system designed to safeguard financial transactions. Leveraging sophisticated algorithms and real-time data analytics, Aetherwatch detects anomalies and suspicious activities.",
+    title: settings.data.site_title || " ",
+    description: settings.data.meta_description || " ",
     openGraph: {
       images: [settings.data.image.url || ""],
     },
@@ -41,12 +42,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={clsx('block bg-blackish-green text-slate-300', roboto_mono.variable, nova_mono.variable)}>
+    <html lang="en" className={clsx(protestGuerrilla.variable, handjet.variable)}>
       <body>
-        <Header />
-        {children}
-        <div className="flex">/</div>
-        <Footer />
+        {/* Video Background */}
+        <div className="video-background">
+          <video autoPlay muted loop className="background-video">
+            <source src="/images/224142_medium.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        {/* Content */}
+        <div className="content font-protest-guerrilla text-slate-200 ">
+          <Header />
+          <div className="font-handjet text-yellow-200 hover:text-slate-300">
+            {children}
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   )

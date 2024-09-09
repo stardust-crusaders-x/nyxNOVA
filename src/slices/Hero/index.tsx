@@ -14,29 +14,29 @@ const components: JSXMapSerializer = {
     <Heading
       as="h2"
       size="xl"
-      className="mt-6 md:mt-10 text-4xl md:text-5xl font-bold text-gray-600 uppercase tracking-[1.3em]"
+      className="mt-6 md:mt-10 text-4xl md:text-5xl font-bold text-gray-600 uppercase tracking-[1.3em] glow"
     >
       {children}
     </Heading>
   ),
   paragraph: ({ children }) => (
     <p 
-      className="mt-6 md:mt-10 text-2xl md:text-2xl font-body text-yellow-200 gap-8 max-w-md space-y-4"
+      className="mt-6 md:mt-10 text-2xl md:text-2xl font-body gap-8 max-w-md space-y-4 neon-text"
     >
       {children}
     </p>
   ),
   // Add bold and list support
   strong: ({ children }) => (
-    <strong className="font-bold">{children}</strong>
+    <strong className="font-bold glow">{children}</strong>
   ),
   list: ({ children }) => (
-    <ul className="list-disc list-inside mt-3 md:mt-10 text-2xl text-yellow-300 space-y-4">
+    <ul className="list-disc list-inside mt-3 md:mt-10 text-2xl text-yellow-300 space-y-4 neon-list">
       {children}
     </ul>
   ),
   listItem: ({ children }) => (
-    <li className="mt-2 font-bold space-y-4">{children}</li>
+    <li className="mt-2 font-bold space-y-4 glow">{children}</li>
   ),
 };
 
@@ -49,24 +49,28 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <Bounded
           data-slice-type={slice.slice_type}
           data-slice-variation={slice.variation}
+          
         >
-          <div className="grid min-h-screen grid-cols-1 place-items-center text-center ">
+          <div className="grid min-h-screen grid-cols-1 place-items-center text-center py-20">
             <PrismicNextImage
               field={slice.primary.image}
-              className="drop-shadow-xl max-w-6xl w-full h-64 object-cover mb-6 md:mb-8"
+              className="drop-shadow-xl max-w-6xl w-full h-64 object-cover mb-6 md:mb-8 rounded-lg"
             />
             <PrismicRichText
               field={slice.primary.heading}
               components={components}
             />
-            <div className="mb-6 md:mb-16 text-4xl">
+            <div className="mb-6 md:mb-16 text-4xl neon-text">
               <PrismicRichText
                 field={slice.primary.body}
                 components={components}
               />
             </div>
-            <div className="w-full flex justify-center mt-10"> {/* Adjust margin top to create space */}
-              <Button field={slice.primary.button_link}>
+            <div className="w-full flex justify-center mt-50"> {/* Adjust margin top to create space */}
+              <Button
+                field={slice.primary.button_link}
+                className="px-6 py-3 text-xl font-bold shadow-md hover:shadow-lg active:scale-90 glow"
+              >
                 {slice.primary.button_text}
               </Button>
             </div>

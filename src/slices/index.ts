@@ -3,8 +3,6 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  chatbot: dynamic(() => import("./Chatbot")),
-  features: dynamic(() => import("./Features")),
   hero: dynamic(() => import("./Hero")),
   sign_up: dynamic(() => import("./SignUp")),
 };
