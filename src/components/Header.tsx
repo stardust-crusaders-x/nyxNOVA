@@ -12,7 +12,7 @@ export default async function Header(){
         <section as ="header" className='transparent font-bold py-4 md:py-2 lg:py-2'>
             <div className="flex gap-4 items-center justify-between px-4 py-2 md:flex">
                 <Link href="/">
-                    <Image src="/images/logo.jpeg" alt="nyxNOVA" width={100} height={10} />
+                    <Image src="/images/logo.png" alt="nyxNOVA" width={100} height={10} />
                 </Link>
                 <nav>
                     <ul className='flex text-lg text-yellow-200 hover:text-slate-200 '>
