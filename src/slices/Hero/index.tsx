@@ -53,7 +53,7 @@ const AboutNyxNova = () => {
   return (
     <div className="mt-80 font-body bg-gray-900 text-gray-100 py-20">
       <div className="grid grid-cols-1 justify-items-center w-full pt-16"> {/* Added pt-16 for top padding */}
-      <h2 className="text-4xl font-bold font-display text-center mb-6 md:mb-16 text-yellow-400 max-w-3xl">
+      <h2 className="text-4xl px-6 font-bold font-display text-center mb-6 md:mb-16 text-yellow-400 max-w-3xl">
       About </h2>
     </div>
       <div className="max-w-4xl mx-auto">
