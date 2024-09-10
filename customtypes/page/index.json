@@ -18,13 +18,13 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "chatbot": {
+            "landing_site": {
+              "type": "SharedSlice"
+            },
+            "upload": {
               "type": "SharedSlice"
             },
             "sign_up": {
-              "type": "SharedSlice"
-            },
-            "features": {
               "type": "SharedSlice"
             }
           }

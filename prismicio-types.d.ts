@@ -76,7 +76,7 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-type PageDocumentDataSlicesSlice = ChatbotSlice | SignUpSlice | FeaturesSlice;
+type PageDocumentDataSlicesSlice = LandingSiteSlice | UploadSlice | SignUpSlice;
 
 /**
  * Content for Page documents
@@ -266,151 +266,6 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes = HomeDocument | PageDocument | SettingsDocument;
 
 /**
- * Primary content in *Chatbot → Default → Primary*
- */
-export interface ChatbotSliceDefaultPrimary {
-  /**
-   * query field in *Chatbot → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: chatbot.default.primary.query
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  query: prismic.RichTextField;
-
-  /**
-   * answer field in *Chatbot → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: chatbot.default.primary.answer
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  answer: prismic.RichTextField;
-}
-
-/**
- * Default variation for Chatbot Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ChatbotSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<ChatbotSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Chatbot*
- */
-type ChatbotSliceVariation = ChatbotSliceDefault;
-
-/**
- * Chatbot Shared Slice
- *
- * - **API ID**: `chatbot`
- * - **Description**: Chatbot
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type ChatbotSlice = prismic.SharedSlice<
-  "chatbot",
-  ChatbotSliceVariation
->;
-
-/**
- * Item in *Features → Default → Primary → icons*
- */
-export interface FeaturesSliceDefaultPrimaryIconsItem {
-  /**
-   * icons field in *Features → Default → Primary → icons*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: features.default.primary.icons[].icons
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  icons: prismic.ImageField<never>;
-
-  /**
-   * title field in *Features → Default → Primary → icons*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: features.default.primary.icons[].title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-
-  /**
-   * description field in *Features → Default → Primary → icons*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: features.default.primary.icons[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-}
-
-/**
- * Primary content in *Features → Default → Primary*
- */
-export interface FeaturesSliceDefaultPrimary {
-  /**
-   * heading field in *Features → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: features.default.primary.heading
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  heading: prismic.RichTextField;
-
-  /**
-   * icons field in *Features → Default → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: features.default.primary.icons[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  icons: prismic.GroupField<Simplify<FeaturesSliceDefaultPrimaryIconsItem>>;
-}
-
-/**
- * Default variation for Features Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FeaturesSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<FeaturesSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Features*
- */
-type FeaturesSliceVariation = FeaturesSliceDefault;
-
-/**
- * Features Shared Slice
- *
- * - **API ID**: `features`
- * - **Description**: Features
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FeaturesSlice = prismic.SharedSlice<
-  "features",
-  FeaturesSliceVariation
->;
-
-/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -491,6 +346,61 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *LandingSite → Default → Primary*
+ */
+export interface LandingSiteSliceDefaultPrimary {
+  /**
+   * description field in *LandingSite → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: landing_site.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * image field in *LandingSite → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: landing_site.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for LandingSite Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingSiteSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<LandingSiteSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *LandingSite*
+ */
+type LandingSiteSliceVariation = LandingSiteSliceDefault;
+
+/**
+ * LandingSite Shared Slice
+ *
+ * - **API ID**: `landing_site`
+ * - **Description**: LandingSite
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LandingSiteSlice = prismic.SharedSlice<
+  "landing_site",
+  LandingSiteSliceVariation
+>;
 
 /**
  * Primary content in *SignUp → Default → Primary*
@@ -574,6 +484,58 @@ type SignUpSliceVariation = SignUpSliceDefault;
  */
 export type SignUpSlice = prismic.SharedSlice<"sign_up", SignUpSliceVariation>;
 
+/**
+ * Primary content in *Upload → Default → Primary*
+ */
+export interface UploadSliceDefaultPrimary {
+  /**
+   * image field in *Upload → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: upload.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * numbers field in *Upload → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: upload.default.primary.numbers
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  numbers: prismic.NumberField;
+}
+
+/**
+ * Default variation for Upload Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type UploadSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<UploadSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Upload*
+ */
+type UploadSliceVariation = UploadSliceDefault;
+
+/**
+ * Upload Shared Slice
+ *
+ * - **API ID**: `upload`
+ * - **Description**: Upload
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type UploadSlice = prismic.SharedSlice<"upload", UploadSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -595,23 +557,22 @@ declare module "@prismicio/client" {
       SettingsDocumentDataNavigationItem,
       SettingsDocumentDataContactItem,
       AllDocumentTypes,
-      ChatbotSlice,
-      ChatbotSliceDefaultPrimary,
-      ChatbotSliceVariation,
-      ChatbotSliceDefault,
-      FeaturesSlice,
-      FeaturesSliceDefaultPrimaryIconsItem,
-      FeaturesSliceDefaultPrimary,
-      FeaturesSliceVariation,
-      FeaturesSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      LandingSiteSlice,
+      LandingSiteSliceDefaultPrimary,
+      LandingSiteSliceVariation,
+      LandingSiteSliceDefault,
       SignUpSlice,
       SignUpSliceDefaultPrimary,
       SignUpSliceVariation,
       SignUpSliceDefault,
+      UploadSlice,
+      UploadSliceDefaultPrimary,
+      UploadSliceVariation,
+      UploadSliceDefault,
     };
   }
 }
