@@ -12,7 +12,7 @@ const config: Config = {
         'blackish-green': '#001a16', // Example custom blackish green color
         },
         fontFamily:{
-          body: ["var(--font-handjet)"],
+          body: ["var(--font-robo_mono)"],
           display: ["var(--font-protestGuerrilla)"]
         }
     },

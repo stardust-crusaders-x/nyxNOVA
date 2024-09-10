@@ -14,7 +14,7 @@ const components: JSXMapSerializer = {
     <Heading
       as="h2"
       size="xl"
-      className="mt-6 md:mt-10 text-4xl md:text-5xl font-bold text-gray-600 uppercase tracking-[1.3em] glow"
+      className="mt-6 md:mt-10 glow"
     >
       {children}
     </Heading>
@@ -49,7 +49,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <Bounded
           data-slice-type={slice.slice_type}
           data-slice-variation={slice.variation}
-          
         >
           <div className="grid min-h-screen grid-cols-1 place-items-center text-center py-20">
             <PrismicNextImage
@@ -60,7 +59,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               field={slice.primary.heading}
               components={components}
             />
-            <div className="mb-6 md:mb-16 text-4xl neon-text">
+            <div className="mb-6 md:mb-16 text-4xl font-body neon-text"> {/* Apply font-body */}
               <PrismicRichText
                 field={slice.primary.body}
                 components={components}
@@ -69,7 +68,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             <div className="w-full flex justify-center mt-50"> {/* Adjust margin top to create space */}
               <Button
                 field={slice.primary.button_link}
-                className="px-6 py-3 text-xl font-bold shadow-md hover:shadow-lg active:scale-90 glow"
+                className="px-6 py-3 text-2xl font-body font-bold shadow-md hover:shadow-lg active:scale-90 glow"  // Ensure font-body for button text
               >
                 {slice.primary.button_text}
               </Button>

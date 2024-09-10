@@ -20,7 +20,7 @@ export default async function Footer(){
         {/* <Image src="/images/Designer (1).png" alt="nyxNOVA" width={60} height={60} /> */}
         </Link>
 
-        <p className="text-xs pt-40 md:pt-40 lg:pt-40 flexflex">
+        <p className="text-xs pt-40 md:pt-40 lg:pt-40 flex">
           ©{new Date().getFullYear()} {settings.data.site_title}
         </p>
 

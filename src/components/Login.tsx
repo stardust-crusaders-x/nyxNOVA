@@ -1,8 +1,8 @@
 'use client';
 
 import "./Login.css";
-import logoimg from "./Designer (1).png";
-import warning from "./Designer (1).png";
+import logoimg from "./logo.png";
+import warning from "./logo.png";
 import { useState } from "react";
 import { StaticImageData } from "next/image";
 

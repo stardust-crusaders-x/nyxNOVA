@@ -7,28 +7,17 @@
   top: 0;
   left: 0;
   width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  display: flex; 
   z-index: -1;
   overflow: hidden;
 }
 
 .background-video {
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  height: 100%; /* Full viewport height */
   object-fit: cover; /* Ensures the video covers the entire area without distortion */
 }
 
+
   
-  /* Fonts */
-  :root {
-    --font-handjet: 'Handjet', sans-serif;
-    --font-protest-guerrilla: 'Protest_Guerrilla', serif;
-  }
-  
-  .font-handjet {
-    font-family: var(--font-handjet);
-  }
-  
-  .font-protest-guerrilla {
-    font-family: var(--font-protest-guerrilla);
-  }

@@ -1,6 +1,6 @@
 import { Protest_Guerrilla } from 'next/font/google'
 import "./globals.css";
-import { Handjet } from 'next/font/google';
+import { Roboto_Mono } from 'next/font/google';
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import clsx from 'clsx';
@@ -8,10 +8,10 @@ import { createClient } from '@/prismicio';
 import Footer from '@/components/Footer';
 import React, { useRef, useEffect } from 'react';
 
-const handjet = Handjet({
+const robo_mono = Roboto_Mono({
   weight: '400',
   subsets: ['vietnamese'],
-  variable: '--font-handjet', 
+  variable: '--font-robo_mono', 
   display: 'swap',
 });
  
@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={clsx(protestGuerrilla.variable, handjet.variable)}>
+    <html lang="en" className={clsx(protestGuerrilla.variable, robo_mono.variable)}>
       <body>
         {/* Video Background */}
         <div className="video-background">
