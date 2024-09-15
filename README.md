@@ -25,8 +25,8 @@
 ### Backend Setup
 
 1. Clone the repository:
-   ``git clone https://github.com/stardust-crusaders-x/nyxNOVA.git``
-      ``cd nyxNOVA``
+   `git clone https://github.com/stardust-crusaders-x/nyxNOVA.git`
+      `cd nyxNOVA`
    
 
 
