@@ -1,0 +1,61 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aliqua esse enim voluptate anim commodo consectetur."
+						}
+					}
+				]
+			},
+			"image": {
+				"url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxiYW5raW5nJTIwc3lzdGVtfGVufDB8fHx8MTcyMTMzODk3NXww&ixlib=rb-4.0.3&q=85",
+				"alt": "Matrix movie still",
+				"origin": {
+					"id": "iar-afB0QQw",
+					"url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxiYW5raW5nJTIwc3lzdGVtfGVufDB8fHx8MTcyMTMzODk3NXww&ixlib=rb-4.0.3&q=85",
+					"width": 5760,
+					"height": 3840
+				},
+				"width": 5760,
+				"height": 3840,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aetherwatch is an advanced finance fraud detection and prevention management system designed to safeguard financial transactions. Leveraging sophisticated algorithms and real-time data analytics, Aetherwatch detects anomalies and suspicious activities, providing proactive alerts and insights to mitigate potential fraud risks effectively. By ensuring robust security measures and continuous monitoring, Aetherwatch empowers financial institutions to protect assets and maintain trust in their operations.\n\nlet's start",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "SIGN UP"
+			}
+		},
+		"items": []
+	}
+]

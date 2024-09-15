@@ -1,0 +1,9 @@
+path: D:\isro_hack\Crater and boulder detection.v2i.yolov9
+train: D:\isro_hack\Crater and boulder detection.v2i.yolov9\images\train
+val: D:\isro_hack\Crater and boulder detection.v2i.yolov9\images\val
+test: D:\isro_hack\Crater and boulder detection.v2i.yolov9\images\test
+
+nc: 2
+names: 
+  0: boulder 
+  1: crater
