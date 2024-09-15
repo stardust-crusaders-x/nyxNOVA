@@ -20,7 +20,7 @@
 
 1. Clone the repository:
    `git clone https://github.com/stardust-crusaders-x/nyxNOVA.git
-      cd nyxNOVA`
+      cd nyxNOVA-be`
 2. Set up a virtual environment:
    `python -m venv venv
 source venv/bin/activate  # On Windows use venv\Scripts\activate`
