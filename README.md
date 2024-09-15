@@ -8,12 +8,6 @@
 ### - Cosmic Pathfinder: Crafting safe routes through the moon's treacherous south polar region, our navigation system ensures rovers can traverse the lunar landscape with confidence.
 ### - Lunar Laboratory: Strategic pit stops for scientific exploration are seamlessly integrated into our navigation plans, maximizing the scientific yield of each mission.
 
-## 🛠 Tech Stack
-
-- State-of-the-art neural networks
-- Advanced graph-based algorithms
-- High-resolution lunar datasets
-
 ## Installation
 
 ### Prerequisites
@@ -25,8 +19,29 @@
 ### Backend Setup
 
 1. Clone the repository:
-   `git clone https://github.com/stardust-crusaders-x/nyxNOVA.git`
-      `cd nyxNOVA`
+   `git clone https://github.com/stardust-crusaders-x/nyxNOVA.git
+      cd nyxNOVA`
+2. Set up a virtual environment:
+   `python -m venv venv
+source venv/bin/activate  # On Windows use venv\Scripts\activate`
+3. Install required packages:
+   `pip install -r requirements.txt`
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   `cd nyxNOVA-fe`
+2. Install dependencies:
+  `npm install`
+3. Run the development server:
+   `npm run dev`
+
+Project Link: [https://github.com/stardust-crusaders-x/nyxNOVA](https://github.com/stardust-crusaders-x/nyxNOVA)
+
+## Acknowledgements
+
+*"One small step for a rover, one giant leap for lunar exploration."* 
+— The nyxNOVA Vanguard
+
    
 
 
