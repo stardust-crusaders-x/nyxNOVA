@@ -1,5 +1,3 @@
-# nyxNOVA: Illuminating Lunar Pathways 🌙🤖
-
 ![nyxNOVA Logo](nyxNOVA-fe/Landing-webpage/nyxNova-main/public/thumbnail.png)
 
 nyxNOVA merges cutting-edge lunar cartography with intelligent rover navigation, paving the way for next-generation lunar exploration. Our solution harnesses the power of AI to decode the moon's enigmatic terrain and chart safe passages for future missions.
