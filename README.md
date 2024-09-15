@@ -37,12 +37,6 @@ source venv/bin/activate  # On Windows use venv\Scripts\activate`
 
 Project Link: [https://github.com/stardust-crusaders-x/nyxNOVA](https://github.com/stardust-crusaders-x/nyxNOVA)
 
-## Acknowledgements
-
 *"One small step for a rover, one giant leap for lunar exploration."* 
 — The nyxNOVA Vanguard
 
-   
-
-
-*"That's one small step for a rover, one giant leap for lunar exploration."* - nyxNOVA Team
