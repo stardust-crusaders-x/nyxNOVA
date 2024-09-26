@@ -6,7 +6,7 @@ import io
 import base64
 from PIL import Image
 import time
-from ultralytics import YOLOv10 as YOLO
+from ultralytics import YOLO as YOLO
 from pathfinding1 import theta_star
 from gevent.pywsgi import WSGIServer
 
@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 
 model = YOLO('yolov10l.yaml')
-model = YOLO("runs\\detect\\train33\\train33\\weights\\best.pt")
+model = YOLO("best.pt")
 
 def process_image(img_data, start, goal):
     img_data = base64.b64decode(img_data)
@@ -22,7 +22,7 @@ def process_image(img_data, start, goal):
     img = np.array(img)
 
     results = model.predict(img, save=True, imgsz=640, conf=0.5, iou=0.5,
-                            save_txt=True, save_conf=True, save_dir='D:\\isro_hack\\predictions')
+                            save_txt=True, save_conf=True, save_dir='nyxNOVA-be\\runs')
 
     binary_map = np.ones(img.shape[:2], dtype=np.uint8)
 
