@@ -1,12 +1,12 @@
 ![nyxNOVA Logo](nyxNOVA-fe/Landing-webpage/nyxNova-main/public/thumbnail.png)
 
-### *"nyxNOVA merges cutting-edge lunar cartography with intelligent rover navigation, paving the way for next-generation lunar exploration. Our solution harnesses the power of AI to decode the moon's enigmatic terrain and chart safe passages for future missions."*
+### *"nyxNOVA merges cutting-edge exoplanet cartography with intelligent rover navigation, paving the way for next-generation cosmic exploration. Our solution harnesses the power of AI to decode the cosmo's enigmatic terrain and chart safe passages for future missions."*
 
 ### Features:
 
- - Celestial Sentinel: Our AI-powered lunar detective scans the lunar surface, unveiling hidden craters and boulders with unprecedented precision.
+ - Celestial Sentinel: Our AI-powered lunar detective scans the exoplanet surface, unveiling hidden craters and boulders with unprecedented precision.
  - Cosmic Pathfinder: Crafting safe routes through the moon's treacherous south polar region, our navigation system ensures rovers can traverse the lunar landscape with confidence.
- - Lunar Laboratory: Strategic pit stops for scientific exploration are seamlessly integrated into our navigation plans, maximizing the scientific yield of each mission.
+ - Cosmic Laboratory: Strategic pit stops for scientific exploration are seamlessly integrated into our navigation plans, maximizing the scientific yield of each mission.
 
 ## Installation
 
