@@ -39,9 +39,9 @@ source venv/bin/activate  # On Windows use venv\Scripts\activate`
 3. Install dependencies:
   `npm install` `yarn install`
 4. Run the development server:  
-  web ~ `cd nyxNova-site`
-  sim ~ `cd MoonLander-Simulator`
-   ed ~ `cd Exoplanet\Atmos_tut\r3f-wawatmos-starter`
+  web ~ ``cd nyxNova-site` `npm run dev``
+  sim ~ ``cd MoonLander-Simulator``
+   ed ~ ``cd Exoplanet\Atmos_tut\r3f-wawatmos-starter` `yarn dev``
   
 
 Project Link: [https://github.com/stardust-crusaders-x/nyxNOVA](https://github.com/stardust-crusaders-x/nyxNOVA)
