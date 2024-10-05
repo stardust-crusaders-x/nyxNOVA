@@ -1,12 +1,12 @@
 ![nyxNOVA Logo](nyxNOVA-fe/Landing-webpage/nyxNova-main/public/thumbnail.png)
 
-### *"nyxNOVA merges cutting-edge lunar cartography with intelligent rover navigation, paving the way for next-generation lunar exploration. Our solution harnesses the power of AI to decode the moon's enigmatic terrain and chart safe passages for future missions."*
+### *"nyxNOVA merges cutting-edge exoplanet cartography with intelligent navigation, paving the way for next-generation cosmic exploration. Our solution harnesses the power of AI to decode the cosmo's enigmatic terrain and chart safe passages for future missions."*
 
 ### Features:
 
- - Celestial Sentinel: Our AI-powered lunar detective scans the lunar surface, unveiling hidden craters and boulders with unprecedented precision.
- - Cosmic Pathfinder: Crafting safe routes through the moon's treacherous south polar region, our navigation system ensures rovers can traverse the lunar landscape with confidence.
- - Lunar Laboratory: Strategic pit stops for scientific exploration are seamlessly integrated into our navigation plans, maximizing the scientific yield of each mission.
+ - Celestial Sentinel: Our AI-powered cosmic detective scans the exoplanet surface, unveiling hidden craters and boulders with unprecedented precision.
+ - Cosmic Pathfinder: Crafting safe routes through the moon's treacherous regions, our navigation system ensures rovers can traverse the lunar landscape with confidence.
+ - Cosmic Laboratory: Strategic pit stops for scientific exploration are seamlessly integrated into our navigation plans, maximizing the scientific yield of each mission.
 
 ## Installation
 
@@ -21,19 +21,25 @@
 1. Clone the repository:
    `git clone https://github.com/stardust-crusaders-x/nyxNOVA.git
       cd nyxNOVA-be`
-2. Set up a virtual environment:
+
+3. Set up a virtual environment:
    `python -m venv venv
 source venv/bin/activate  # On Windows use venv\Scripts\activate`
-3. Install required packages:
+4. Install required packages:
    `pip install -r requirements.txt`
+   or
+   `pip install pqdict segmentation_models_pytorch`
+   `pip install pytorch-lightning`
+   `pip install torch`
 ### Frontend Setup
 
 1. Navigate to the frontend directory:
    `cd nyxNOVA-fe`
-2. Install dependencies:
-  `npm install`
-3. Run the development server:
-   `npm run dev`
+ `exoplanet charting: cd Exoplanet\Atmos_tut\r3f-wawatmos-starter`
+3. Install dependencies:
+  `npm install` `yarn install`
+4. Run the development server:
+   `npm run dev` `yarn dev`
 
 Project Link: [https://github.com/stardust-crusaders-x/nyxNOVA](https://github.com/stardust-crusaders-x/nyxNOVA)
 
