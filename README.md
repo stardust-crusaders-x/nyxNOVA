@@ -21,19 +21,25 @@
 1. Clone the repository:
    `git clone https://github.com/stardust-crusaders-x/nyxNOVA.git
       cd nyxNOVA-be`
-2. Set up a virtual environment:
+
+3. Set up a virtual environment:
    `python -m venv venv
 source venv/bin/activate  # On Windows use venv\Scripts\activate`
-3. Install required packages:
+4. Install required packages:
    `pip install -r requirements.txt`
+   or
+   `pip install pqdict segmentation_models_pytorch`
+   `pip install pytorch-lightning`
+   `pip install torch`
 ### Frontend Setup
 
 1. Navigate to the frontend directory:
    `cd nyxNOVA-fe`
-2. Install dependencies:
-  `npm install`
-3. Run the development server:
-   `npm run dev`
+ `exoplanet charting: cd Exoplanet\Atmos_tut\r3f-wawatmos-starter`
+3. Install dependencies:
+  `npm install` `yarn install`
+4. Run the development server:
+   `npm run dev` `yarn dev`
 
 Project Link: [https://github.com/stardust-crusaders-x/nyxNOVA](https://github.com/stardust-crusaders-x/nyxNOVA)
 
