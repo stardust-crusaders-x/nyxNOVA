@@ -1,0 +1,51 @@
+{
+  "id": "upload",
+  "type": "SharedSlice",
+  "name": "Upload",
+  "description": "Upload",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "gasGiantImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "neptuneimage": {
+          "type": "Image",
+          "config": {
+            "label": "neptuneImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "superearthimage": {
+          "type": "Image",
+          "config": {
+            "label": "superEarthImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "terrestrialimage": {
+          "type": "Image",
+          "config": {
+            "label": "terrestrialImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
