@@ -1,4 +1,4 @@
-![nyxNOVA Logo](nyxNOVA-fe/Landing-webpage/nyxNova-main/public/thumbnail.png)
+![nyxNOVA Logo](nyxNOVA-fe/nyxNova-site/public/images/display.png)
 
 ### *"nyxNOVA merges cutting-edge exoplanet cartography with intelligent navigation, paving the way for next-generation cosmic exploration. Our solution harnesses the power of AI to decode the cosmo's enigmatic terrain and chart safe passages for future missions."*
 
