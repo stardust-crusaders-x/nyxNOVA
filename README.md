@@ -46,7 +46,7 @@ source venv/bin/activate  # On Windows use venv\Scripts\activate`
            yarn dev``
   
 
-Project Link: [https://github.com/stardust-crusaders-x/nyxNOVA](https://github.com/stardust-crusaders-x/nyxNOVA)
+Project Demo Link: [Here.](https://youtu.be/RsnvzgQ9zzY)
 
 *"One small step for a cosmo, one giant leap for space exploration."* 
 — The nyxNOVA Vanguard
